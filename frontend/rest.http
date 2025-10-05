@@ -1,0 +1,58 @@
+POST http://127.0.0.1:8000/auth/register/
+Content-Type: application/json
+
+{
+    "username": "raj",
+    "password": "123",
+    "email": "raj@gmail.com",
+    "first_name": "Raj",
+    "last_name": "Guru"
+}
+
+###
+POST http://127.0.0.1:8000/auth/login/
+Content-Type: application/json
+
+{
+    "username": "raja",
+    "password": "123"
+}
+
+###
+POST http://127.0.0.1:8000/auth/login/token/refresh/
+Content-Type: application/json
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1OTcyNDM0MiwiaWF0IjoxNzU5NjM3OTQyLCJqdGkiOiI4ZWRmNGY2NWFiMjY0ZDcxYWJkMmZjOTE1NTZiOGNhZSIsInVzZXJfaWQiOiIyIn0.GmQFKvpoTtSmQgo2pii4MDNmFfsplzpHGJN6RDhsODA"
+}
+
+###
+POST http://127.0.0.1:8000/products/details/
+Content-Type: application/json
+
+{
+    "name": "Product 2",
+    "price": 200,
+    "category": "Category 2",
+    "description": "Description for Product 2"
+}
+
+###
+PUT http://127.0.0.1:8000/products/details/2/
+Content-Type: application/json
+
+{
+    "name": "Product 3",
+    "price": 300,
+    "category": "Category 3",
+    "description": "Description for Product 3"
+}
+
+###
+GET http://127.0.0.1:8000/products/details/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5NjUwMzIxLCJpYXQiOjE3NTk2NDY3MjEsImp0aSI6IjFmZjIyMDlhMWY4NDQ4MzZiN2VjOGEzMDU0ZGE3YjAwIiwidXNlcl9pZCI6IjIifQ.PdkF9Q1s_WJ6xVUmF9QRY9FBenrdl4ZrdCewsOGx1TU
+
+###
+DELETE http://127.0.0.1:8000/products/details/20/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5NjQyODgxLCJpYXQiOjE3NTk2MzkyODEsImp0aSI6IjIzMDRlNTBiZDM3MDQ0ZDM5YWE1Y2RiNDQ5NWY1YmM5IiwidXNlcl9pZCI6IjIifQ.httGsNaxuP9JfrNUTh642hM7BXbwyXWqsLFkx6IkWU8
+
