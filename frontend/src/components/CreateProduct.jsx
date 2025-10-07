@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BASE_API_URL } from "../constants/api";
 
-const CreateProduct = ({ formData, setFormData, btn, fetchData }) => {
+const CreateProduct = ({ formData, setFormData, btn, setBtn, fetchData }) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -42,6 +42,7 @@ const CreateProduct = ({ formData, setFormData, btn, fetchData }) => {
             body: JSON.stringify(formData),
           }
         );
+        setBtn("Create");
       } else {
         response = await fetch(`${BASE_API_URL}products/details/`, {
           method: "POST",
