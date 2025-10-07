@@ -11,7 +11,7 @@ This is a web application for managing products. The frontend is built with **Re
 - Mysql database for simplicity
 
 ## Tech Stack
-- **Frontend**: React.js, Axios
+- **Frontend**: React.js, Tailwind css
 - **Backend**: Django, Django REST Framework, JWT (djangorestframework-simplejwt)
 - **Database**: Mysql (development)
 - **Other**: Python 3.x, Node.js
